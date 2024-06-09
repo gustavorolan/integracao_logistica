@@ -1,0 +1,28 @@
+spring:
+
+  application:
+    name: integracao_logistica
+
+  servlet:
+    multipart:
+      max-file-size: 60MB
+      max-request-size: 60MB
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    queue:
+      order:
+        name: order
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/integracao_logistica
+    username: postgres
+    password: 123456
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
