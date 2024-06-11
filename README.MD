@@ -53,6 +53,10 @@ Este serviço é baseado na entidade **Order**. O retorno da função `findAll` 
 - Foi utilizado o `create-drop` do próprio Spring para a criação do banco de dados.
 - No entanto, em produção, os scripts seriam feitos manualmente.
 
+### Arquitetura
+
+Utilizei a arquitetura Onion, mas fiz apenas a estrutura de pastas para passar a ideia. Para um projeto maior, poderia separar em módulos.
+
 # Objetivo do Projeto
 
 - O objetivo foi focar em uma solução um pouco diferente do que já havia sido feito, aproveitando para conhecer o RabbitMQ e tornar o tempo de resposta mais rápido.

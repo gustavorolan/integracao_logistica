@@ -43,7 +43,7 @@ class OrderServiceImpl(
 
     companion object {
         private val SORT_DIRECTION = Sort.Direction.DESC
-        private const val PAGE_SIZE = 1
+        private const val PAGE_SIZE = 10
         private const val PROPERTY_TO_SORT = "purchaseDate"
         private val orderRequest: (Int) -> PageRequest = { page ->
             PageRequest.of(
