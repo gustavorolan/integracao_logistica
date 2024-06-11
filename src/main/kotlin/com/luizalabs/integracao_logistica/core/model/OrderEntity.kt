@@ -1,17 +1,13 @@
 package com.luizalabs.integracao_logistica.core.model
 
-import com.fasterxml.jackson.annotation.JsonIgnore
 import jakarta.persistence.*
-import org.hibernate.annotations.Type
 import java.time.LocalDate
-
-import java.util.UUID
+import java.util.*
 
 @Entity
 data class OrderEntity(
 
-    @Id
-    val id: String= UUID.randomUUID().toString(),
+    @Id val id: UUID = UUID.randomUUID(),
 
     @Column(unique = true)
     val externalId: Long = Long.MIN_VALUE,
@@ -24,6 +20,8 @@ data class OrderEntity(
 
     @OneToMany(mappedBy = "order", cascade = [(CascadeType.ALL)])
     val products: MutableList<ProductEntity> = mutableListOf(),
+
+    val orderBatchId: UUID = UUID.randomUUID(),
 
     )
 

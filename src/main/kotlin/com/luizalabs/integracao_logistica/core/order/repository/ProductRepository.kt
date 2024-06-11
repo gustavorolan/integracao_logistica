@@ -7,7 +7,7 @@ import java.math.BigDecimal
 import java.util.*
 
 @Repository
-interface ProductRepository : JpaRepository<ProductEntity, String> {
-    fun findByExternalIdAndValueAndOrderId(externalId: Long, value: BigDecimal, orderId: String): ProductEntity?
-    fun findByOrderIdIn(orderIds: List<String>):List<ProductEntity>
+interface ProductRepository : JpaRepository<ProductEntity, UUID> {
+    fun findByExternalIdAndValueAndOrderId(externalId: Long, value: BigDecimal, orderId: UUID): ProductEntity?
+    fun findByOrderIdIn(orderIds: List<UUID>): List<ProductEntity>
 }

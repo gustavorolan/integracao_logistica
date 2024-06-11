@@ -7,8 +7,8 @@ import java.util.*
 
 @Entity
 data class UserEntity(
-    @Id
-    val id: String = UUID.randomUUID().toString(),
+
+    @Id val id: UUID = UUID.randomUUID(),
 
     val externalId: Long = Long.MIN_VALUE,
 

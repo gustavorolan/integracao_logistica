@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 import org.springframework.web.multipart.MultipartFile
+import java.time.LocalDate
+import java.util.UUID
 
 @RestController
 @RequestMapping("/api/v0/orders")
@@ -19,12 +21,17 @@ class OrderController(
     fun uploadFile(@RequestParam("file") file: MultipartFile) = orderService.insertOrders(file)
 
     @GetMapping()
-    fun findAll(@RequestParam("page") page: Int) = orderService.findAll(page)
+    fun findAll(
+        @RequestParam("page") page: Int,
+        @RequestParam("initial_date") initialDate: LocalDate?,
+        @RequestParam("final_date") finalDate: LocalDate?
+    ) =
+        orderService.findAll(page, initialDate, finalDate)
 
     @GetMapping("/{externalId}")
     fun findById(@PathVariable("externalId") externalId: Long) = orderService.findByExternalId(externalId)
 
     @GetMapping("/batch/{orderBatchId}")
-    fun findBatchById(@PathVariable("orderBatchId") orderBatchId: String) = orderService.findBatchById(orderBatchId)
+    fun findBatchById(@PathVariable("orderBatchId") orderBatchId: UUID) = orderService.findBatchById(orderBatchId)
 
 }

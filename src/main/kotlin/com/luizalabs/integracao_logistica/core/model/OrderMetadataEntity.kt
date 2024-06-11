@@ -9,7 +9,7 @@ import java.util.*
 
 @Entity
 data class OrderMetadataEntity(
-    @Id val id: String = UUID.randomUUID().toString(),
+    @Id val id: UUID = UUID.randomUUID(),
 
     val errorLine: Int = 0,
 

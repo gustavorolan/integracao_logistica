@@ -4,20 +4,17 @@ import com.luizalabs.integracao_logistica.core.model.ProductEntity
 import com.luizalabs.integracao_logistica.core.order.repository.ProductRepository
 import com.luizalabs.integracao_logistica.core.order.service.ProductService
 import org.springframework.stereotype.Service
+import java.util.UUID
 
 @Service
 class ProductServiceImpl(
     private val productRepository: ProductRepository,
 ) : ProductService {
 
-    override fun upsertByExternalIdAndValue(productEntity: ProductEntity): ProductEntity {
+    override fun save(productEntity: ProductEntity): ProductEntity =
+        productRepository.save(productEntity)
 
-        val product = productRepository.findByExternalIdAndValueAndOrderId(productEntity.externalId, productEntity.value, productEntity.order.id)
-            ?.let { productEntity.copy(id = it.id) } ?: productEntity
 
-        return productRepository.save(product)
-    }
-
-    override fun findByOrderIdIn(ordersIds: List<String>): List<ProductEntity> =
+    override fun findByOrderIdIn(ordersIds: List<UUID>): List<ProductEntity> =
         productRepository.findByOrderIdIn(ordersIds)
 }

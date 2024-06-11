@@ -6,14 +6,21 @@ import java.util.*
 
 @Entity
 data class OrderBatchEntity(
-    @Id val id: String = UUID.randomUUID().toString(),
+    @Id val id: UUID = UUID.randomUUID(),
 
-    val success: Boolean = false,
+    @Enumerated(EnumType.STRING)
+    val status: OrderBatchStatus = OrderBatchStatus.WAITING,
 
     val totalErrorLines: Int = 0,
+
+    val totalLines: Int = 0,
 
     @OneToMany(mappedBy = "orderBatch", cascade = [(CascadeType.ALL)])
     val ordersMetadata: MutableList<OrderMetadataEntity> = mutableListOf(),
 )
+
+enum class OrderBatchStatus {
+    WAITING, FAILED, SUCCESSFUL
+}
 
 

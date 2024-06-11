@@ -7,7 +7,7 @@ import java.util.Optional
 import java.util.UUID
 
 @Repository
-interface UserRepository : JpaRepository<UserEntity, String> {
+interface UserRepository : JpaRepository<UserEntity, UUID> {
 
     fun findByExternalId(externalId: Long): UserEntity?
 }
