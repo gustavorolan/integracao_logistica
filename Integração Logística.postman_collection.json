@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "991f3bb9-97cb-40bd-94b8-64c9d6349cf8",
+		"name": "Integração Logística",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22771809"
+	},
+	"item": [
+		{
+			"name": "InsertOrderData",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/gusta/Documents/data_2 - Copy.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/v0/orders/batch/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"orders",
+						"batch",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllOrders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v0/orders?page=3&initial_date=2021-06-15",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "3"
+						},
+						{
+							"key": "initial_date",
+							"value": "2021-06-15"
+						},
+						{
+							"key": "final_date",
+							"value": "2021-06-15",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v0/orders/5000000119",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"orders",
+						"5000000119"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findBatchById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v0/orders/batch/b028cb72-1651-461f-bb9f-dc981f07041c",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v0",
+						"orders",
+						"batch",
+						"b028cb72-1651-461f-bb9f-dc981f07041c"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
