@@ -61,6 +61,11 @@ Utilizei a arquitetura Onion, mas fiz apenas a estrutura de pastas para passar a
 
 - O objetivo foi focar em uma solução um pouco diferente do que já havia sido feito, aproveitando para conhecer o RabbitMQ e tornar o tempo de resposta mais rápido.
 
+# Postman
+
+- Deixei um arquivo na pasta raiz do projeto com as requisições da api.
+
+
 # Como executar
 
 - Deixei um docker-compose pronto, apenas execute o docker compose up com o terminal aberto na pasta raiz do seu computador
