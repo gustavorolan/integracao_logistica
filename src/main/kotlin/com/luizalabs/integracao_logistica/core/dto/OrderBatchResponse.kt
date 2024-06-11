@@ -1,8 +1,6 @@
 package com.luizalabs.integracao_logistica.core.dto
 
 import com.luizalabs.integracao_logistica.core.model.OrderBatchStatus
-import jakarta.persistence.Id
-import java.util.*
 
 data class OrderBatchResponse(
     val orderBatchId: String

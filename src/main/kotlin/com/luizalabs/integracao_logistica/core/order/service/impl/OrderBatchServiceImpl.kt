@@ -8,11 +8,9 @@ import com.luizalabs.integracao_logistica.core.model.OrderMetadataEntity
 import com.luizalabs.integracao_logistica.core.order.repository.OrderBatchRepository
 import com.luizalabs.integracao_logistica.core.order.service.OrderBatchService
 import com.luizalabs.integracao_logistica.core.order.service.OrderMetadataService
-import com.luizalabs.integracao_logistica.core.order.service.OrderService
-import org.jetbrains.annotations.VisibleForTesting
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
-import java.util.UUID
+import java.util.*
 
 @Service
 class OrderBatchServiceImpl(

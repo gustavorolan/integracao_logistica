@@ -3,9 +3,8 @@ package com.luizalabs.integracao_logistica.factory
 import com.luizalabs.integracao_logistica.core.dto.ProductDto
 import com.luizalabs.integracao_logistica.core.model.OrderEntity
 import com.luizalabs.integracao_logistica.core.model.ProductEntity
-import com.luizalabs.integracao_logistica.core.model.UserEntity
 import java.math.BigDecimal
-import java.util.UUID
+import java.util.*
 
 class ProductFactory {
     companion object {

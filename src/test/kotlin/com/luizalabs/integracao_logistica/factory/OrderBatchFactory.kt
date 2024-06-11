@@ -1,12 +1,11 @@
 package com.luizalabs.integracao_logistica.factory
 
 import com.luizalabs.integracao_logistica.core.dto.OrderBatchCompleteResponse
-import com.luizalabs.integracao_logistica.core.dto.OrderBatchResponse
 import com.luizalabs.integracao_logistica.core.dto.OrderMetadataResponse
 import com.luizalabs.integracao_logistica.core.model.OrderBatchEntity
 import com.luizalabs.integracao_logistica.core.model.OrderBatchStatus
 import com.luizalabs.integracao_logistica.core.model.OrderMetadataEntity
-import java.util.UUID
+import java.util.*
 
 class OrderBatchFactory {
     companion object {

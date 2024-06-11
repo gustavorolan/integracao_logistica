@@ -5,8 +5,6 @@ import com.luizalabs.integracao_logistica.core.order.service.ProductService
 import com.luizalabs.integracao_logistica.factory.ProductFactory
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
-
-import org.junit.jupiter.api.Assertions.*
 import org.mockito.Mockito
 
 class ProductServiceImplTest {
