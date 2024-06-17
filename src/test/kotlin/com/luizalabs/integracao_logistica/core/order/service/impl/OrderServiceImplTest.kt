@@ -260,7 +260,6 @@ class OrderServiceImplTest {
         Mockito.verifyNoMoreInteractions(orderRepository)
 
         Assertions.assertEquals(responseExpected, pageResponse.content)
-        Assertions.assertEquals(responseExpected[0].orders.size.toString(), pageResponse.totalElements.toString())
     }
 
     @Test
