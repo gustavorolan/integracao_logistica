@@ -59,7 +59,7 @@ class OrderBatchServiceImpl(
     ) {
 
         val orderMetadataEntity = OrderMetadataEntity(
-            //Index correction to show correct line
+            //Index fix to show correct line
             errorLine = orderLine + 1,
             errorMessage = e.message.toString(),
             orderBatch = orderBatchEntity
